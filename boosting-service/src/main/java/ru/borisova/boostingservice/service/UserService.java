@@ -11,6 +11,7 @@ import ru.borisova.boostingservice.repository.OrderRepository;
 import ru.borisova.boostingservice.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
@@ -42,17 +43,6 @@ public class UserService {
         return userRepository.findAllByEmail(email).size() == 0;
     }
 
-    @Transactional
-    public String login(LoginModel model) {
-        if (model.logPassword == null) throw new RuntimeException();
-        List<User> users = userRepository.
-                findAllByEmailAndPasswordAndRoleNot(model.logEmail, model.logPassword, "block");
-        return users.size() != 0
-                ? users.get(users.size() - 1).role
-                : "err";
-    }
-
-    @Transactional
     public User register(RegisterModel model) {
         User user = new User(
                 model.regNickname,
@@ -157,7 +147,7 @@ public class UserService {
         user.setAvatar(model.avatar);
         user.setNickname(model.nickname);
         user.setPhone(model.phone);
-        if (model.password != "" && model.password != " ") {
+        if (!Objects.equals(model.password, "") && !Objects.equals(model.password, " ")) {
             user.setPassword(encoder.encode(model.password));
         }
 

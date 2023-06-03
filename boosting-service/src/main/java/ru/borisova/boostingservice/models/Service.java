@@ -15,8 +15,8 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     public String name;
-    public Integer cost;
-    public Integer discount;
+    public Float cost;
+    public Float discount;
 
     public Service(String name, Integer cost, Integer discount) {
         this.name = name;
