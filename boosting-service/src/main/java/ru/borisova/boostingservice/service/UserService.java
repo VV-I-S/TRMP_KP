@@ -1,6 +1,7 @@
 package ru.borisova.boostingservice.service;
 
 import jakarta.transaction.Transactional;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import ru.borisova.boostingservice.models.Order;
@@ -11,7 +12,6 @@ import ru.borisova.boostingservice.models.viewModels.RegisterModel;
 import ru.borisova.boostingservice.models.viewModels.ViewUserModel;
 import ru.borisova.boostingservice.repository.OrderRepository;
 import ru.borisova.boostingservice.repository.UserRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +21,8 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final OrderRepository orderRepository;
+
+    private final PasswordEncoder encoder;
 
     public User getUserInfo(String email) {
         User userFromDB = userRepository.findFirstByEmail(email);
@@ -54,13 +56,12 @@ public class UserService {
 
     @Transactional
     public User register(RegisterModel model) {
-        User user = new User(model.regNickname, model.regEmail, model.regPhone, model.regPassword);
-//      if (model.regPassword == null) throw new RuntimeException();
-
-
-
-
-//        if (user != null) throw new RuntimeException();
+        User user = new User(
+                model.regNickname,
+                model.regEmail,
+                model.regPhone,
+                encoder.encode(model.regPassword)
+        );
         return userRepository.save(user);
     }
 
@@ -134,6 +135,8 @@ public class UserService {
                 new ArrayList<>(List.of("Выполнен", "Отменен")),
                 user
         );
+
+        if (user == null || order == null) return null;
 
         order.status = status;
         orderRepository.save(order);
