@@ -5,10 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import ru.borisova.boostingservice.models.Order;
-import ru.borisova.boostingservice.models.User;
-import ru.borisova.boostingservice.models.viewModels.ListOrder;
-import ru.borisova.boostingservice.models.viewModels.LoginModel;
-import ru.borisova.boostingservice.models.viewModels.RegisterModel;
+import ru.borisova.boostingservice.models.viewModels.*;
 import ru.borisova.boostingservice.models.viewModels.ViewUserModel;
 import ru.borisova.boostingservice.repository.OrderRepository;
 import ru.borisova.boostingservice.repository.UserRepository;
@@ -32,7 +29,8 @@ public class UserService {
                 userFromDB.email,
                 userFromDB.phone,
                 null,
-                userFromDB.role
+                userFromDB.role,
+                userFromDB.avatar
         );
     }
 
@@ -76,7 +74,8 @@ public class UserService {
                 userForBlock.email,
                 userForBlock.phone,
                 null,
-                userForBlock.role
+                userForBlock.role,
+                userForBlock.avatar
         );
 
     }
@@ -104,6 +103,7 @@ public class UserService {
                 user.nickname,
                 user.email,
                 user.phone,
+                user.avatar,
                 viewListOrders
         );
     }
@@ -151,4 +151,16 @@ public class UserService {
         );
     }
 
+    public User changeInfo(ChangeInfoModel model, String email) {
+        User user = userRepository.findFirstByEmail(email);
+
+        user.setAvatar(model.avatar);
+        user.setNickname(model.nickname);
+        user.setPhone(model.phone);
+        if (model.password != "" && model.password != " ") {
+            user.setPassword(encoder.encode(model.password));
+        }
+
+        return userRepository.save(user);
+    }
 }
