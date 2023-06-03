@@ -33,7 +33,7 @@ const BoosterProfile = () => {
         axios.get(`api/booster/getNewBoosterInfo`).then(({data}) => setNewOrder(data))
         axios.get(`api/booster/check`).then(({data}) => setOrderNow(data))
     }, [userStore, canReloadOrder])
-    
+
     return (
         <div>
             <div className={style.wrapper_row}>
