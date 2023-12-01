@@ -5,6 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import ru.borisova.boostingservice.models.Order;
+import ru.borisova.boostingservice.models.User;
 import ru.borisova.boostingservice.models.viewModels.*;
 import ru.borisova.boostingservice.models.viewModels.ViewUserModel;
 import ru.borisova.boostingservice.repository.OrderRepository;

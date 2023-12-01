@@ -18,6 +18,10 @@ public class TestController {
     private final TransactionalService transactionalService;
 
     @Transactional
+    @GetMapping("test")
+    public String test() {
+        return "123";
+    }
     @GetMapping("test1")
     public String pass1pass2() {
 
