@@ -4,6 +4,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import AdminProfile from "./pages/Profile/AdminProfile/AdminProfile";
+import axios from "axios";
 
 // const routConfig = {
 //   Login:{
@@ -33,6 +35,8 @@ function NotificationsScreen({navigation}: {navigation: any}) {
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+
+    axios.defaults.baseURL = 'https://192.168.1.140:8080/api'
   return (
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">
@@ -42,6 +46,7 @@ export default function App() {
           <Drawer.Screen name="Register" component={Register}  options={{
               drawerItemStyle: { height: 0 }
           }}/>
+          <Drawer.Screen name="Администратор" component={AdminProfile} />
         </Drawer.Navigator>
       </NavigationContainer>
   );

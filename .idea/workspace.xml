@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c473f9a-7b60-42c0-bac4-b719e2df46e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/course-work-team-158-borisova.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/models/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/models/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +46,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.last.introduce.type" value="LET" />
@@ -63,6 +64,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
     <property name="ts.external.directory.path" value="D:\Documents\VLSU\4years\7sem\TRMP\TRMP_KP\boosting-service\clientApp\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\VLSU\4years\7sem\TRMP\TRMP_KP\boosting-service\clientApp\pages\Profile" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.android">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
@@ -133,7 +139,7 @@
       <workItem from="1700858466643" duration="3212000" />
       <workItem from="1700862036326" duration="184000" />
       <workItem from="1700937702115" duration="220000" />
-      <workItem from="1700938340358" duration="8121000" />
+      <workItem from="1700938340358" duration="13422000" />
     </task>
     <servers />
   </component>
