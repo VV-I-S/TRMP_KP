@@ -4,19 +4,20 @@ import axios from "axios";
 
 const UserProfile = () =>{
 
-    const [emailForBlock, setEmail] = useState();
+    const [emailForBlock, setEmail] = useState('');
 
-    const changeEmail = (event: any) => {
-        setEmail(event.target.value);
+    const changeEmail = (text:string) => {
+        setEmail(text);
     };
 
 return (
     <View>
         <TextInput value={emailForBlock}
-                        onChange={changeEmail}></TextInput>
+                        onChangeText={changeEmail}></TextInput>
         <Button
             title="Заблокировать"
-            onPress={() => { axios.get(`/admin/blockUser?email=${emailForBlock}`) }}
+            onPress={() => { axios.get(`tran/blockUser?email=${emailForBlock}`) }}
+            //onPress={() => { axios.get(`tran/test`).then(({data})=>console.log(data))}}
             />
         <Button
             title="Разблокировать"

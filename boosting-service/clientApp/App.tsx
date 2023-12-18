@@ -36,7 +36,6 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
 
-    axios.defaults.baseURL = 'https://192.168.1.140:8080/api'
   return (
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">

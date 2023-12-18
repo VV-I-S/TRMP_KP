@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c473f9a-7b60-42c0-bac4-b719e2df46e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/pages/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/clientApp/pages/Profile/AdminProfile/AdminProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/clientApp/pages/Profile/AdminProfile/AdminProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/src/main/java/ru/borisova/boostingservice/controllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +66,9 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
     <property name="ts.external.directory.path" value="D:\Documents\VLSU\4years\7sem\TRMP\TRMP_KP\boosting-service\clientApp\node_modules\typescript\lib" />
   </component>
@@ -71,19 +78,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.android">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="ReactNative" factoryName="React Native" nameIsGenerated="true">
       <working-dir value="D:\Documents\VLSU\4years\7sem\TRMP\TRMP_KP\boosting-service" />
       <node-interpreter value="project" />
@@ -139,7 +133,8 @@
       <workItem from="1700858466643" duration="3212000" />
       <workItem from="1700862036326" duration="184000" />
       <workItem from="1700937702115" duration="220000" />
-      <workItem from="1700938340358" duration="13422000" />
+      <workItem from="1700938340358" duration="19657000" />
+      <workItem from="1702889034958" duration="74000" />
     </task>
     <servers />
   </component>

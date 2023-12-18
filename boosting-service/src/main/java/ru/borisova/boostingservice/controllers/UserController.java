@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ru.borisova.boostingservice.models.User;
 import ru.borisova.boostingservice.models.viewModels.ListOrder;
 import ru.borisova.boostingservice.models.viewModels.ViewUserModel;
 import ru.borisova.boostingservice.service.UserService;
@@ -17,7 +18,6 @@ import ru.borisova.boostingservice.service.UserService;
 public class UserController {
 
     private final UserService userService;
-
     @GetMapping("getUserInfo")
     public ViewUserModel getUserInfo(Authentication auth) {
         return userService.getUserOrders(auth.getName());
