@@ -82,6 +82,7 @@ public class UserService {
         for (Order order : orders) {
             viewListOrders.add(
                     new ListOrder(order.id,
+                            order.dateOfCreate,
                             order.startMMR,
                             order.endMMR,
                             order.countLP,
@@ -111,6 +112,7 @@ public class UserService {
                 ? null
                 : new ListOrder(
                 order.id,
+                order.dateOfCreate,
                 order.startMMR,
                 order.endMMR,
                 order.countLP,
@@ -134,6 +136,7 @@ public class UserService {
 
         return new ListOrder(
                 order.id,
+                order.dateOfCreate,
                 order.startMMR,
                 order.endMMR,
                 order.countLP,

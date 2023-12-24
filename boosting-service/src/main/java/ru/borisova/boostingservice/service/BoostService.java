@@ -31,6 +31,7 @@ public class BoostService {
         for (Order order : orders) {
             viewListOrders.add(
                     new ListOrder(order.id,
+                            order.dateOfCreate,
                             order.startMMR,
                             order.endMMR,
                             order.countLP,
@@ -59,6 +60,7 @@ public class BoostService {
         for (Order order : orders) {
             viewListOrders.add(
                     new ListOrder(order.id,
+                            order.dateOfCreate,
                             order.startMMR,
                             order.endMMR,
                             order.countLP,
@@ -87,6 +89,7 @@ public class BoostService {
 
         return new ListOrder(
                 order.id,
+                order.dateOfCreate,
                 order.startMMR,
                 order.endMMR,
                 order.countLP,
@@ -108,6 +111,7 @@ public class BoostService {
                 ? null
                 : new ListOrder(
                 order.id,
+                order.dateOfCreate,
                 order.startMMR,
                 order.endMMR,
                 order.countLP,
@@ -133,6 +137,7 @@ public class BoostService {
 
         return new ListOrder(
                 order.id,
+                order.dateOfCreate,
                 order.startMMR,
                 order.endMMR,
                 order.countLP,

@@ -26,7 +26,8 @@ const Profile: ComponentWithNavigation = ({navigation}) => {
   return (
     <View style={Styles.container}>
       <Button title={'Выйти'} onPress={onExit} />
-      {profiles[userStore?.role]}
+      {/*@ts-ignore*/}
+      {profiles[userStore?.role as keyof profiles]}
     </View>
   )
 }

@@ -15,10 +15,10 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     public String name;
-    public Integer cost;
-    public Integer discount;
+    public Long cost;
+    public Long discount;
 
-    public Service(String name, Integer cost, Integer discount) {
+    public Service(String name, Long cost, Long discount) {
         this.name = name;
         this.cost = cost;
         this.discount = discount;

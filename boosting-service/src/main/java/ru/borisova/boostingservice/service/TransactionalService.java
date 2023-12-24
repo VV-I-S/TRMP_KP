@@ -19,7 +19,7 @@ public class TransactionalService {
 
     @Transactional(Transactional.TxType.REQUIRES_NEW)
     public String createNewServiceForTest1(){
-        serviceRepository.save(new Service("test1",100,10));
+        serviceRepository.save(new Service("test1", 100L, 10L));
 
         return "test_complete";
     }
@@ -32,7 +32,7 @@ public class TransactionalService {
 
     @Transactional
     public String createNewServiceForTest2(){
-        serviceRepository.save(new Service("test2",100,10));
+        serviceRepository.save(new Service("test2", 100L, 10L));
 
         return "test_complete";
     }
