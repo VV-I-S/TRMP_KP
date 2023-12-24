@@ -1,30 +1,36 @@
-import React, { useState } from "react";
-import {Button, TextInput, View} from 'react-native';
-import axios from "axios";
+import React, {useState} from 'react'
+import {Button, TextInput, View} from 'react-native'
+import axios from 'axios'
 
-const UserProfile = () =>{
+const AdminProfile = () => {
+    const [emailForBlock, setEmail] = useState('')
 
-    const [emailForBlock, setEmail] = useState('');
+    const changeEmail = (text: string) => {
+        setEmail(text)
+    }
 
-    const changeEmail = (text:string) => {
-        setEmail(text);
-    };
-
-return (
-    <View>
-        <TextInput value={emailForBlock}
-                        onChangeText={changeEmail}></TextInput>
-        <Button
-            title="Заблокировать"
-            onPress={() => { axios.get(`tran/blockUser?email=${emailForBlock}`) }}
-            //onPress={() => { axios.get(`tran/test`).then(({data})=>console.log(data))}}
+    return (
+        <View>
+            <TextInput value={emailForBlock} onChangeText={changeEmail} />
+            <Button
+                title="Заблокировать"
+                onPress={() => {
+                    axios.get(`/admin/blockUser?email=${emailForBlock}`)
+                }}
             />
-        <Button
-            title="Разблокировать"
-        />
-        <Button
-            title="Сделать бустером"
-        />
-    </View>)
+            <Button
+                title="Разблокировать"
+                onPress={() => {
+                    axios.get(`/admin/unblockUser?email=${emailForBlock}`)
+                }}
+            />
+            <Button
+                title="Сделать бустером"
+                onPress={() => {
+                    axios.get(`/admin/setrolebooster?email=${emailForBlock}`)
+                }}
+            />
+        </View>
+    )
 }
-export default UserProfile
+export default AdminProfile
