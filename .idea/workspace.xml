@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37b30bc5-154e-49c6-a68d-549055229614" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/SingleDraft.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/SingleDraft.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703344948576</updated>
       <workItem from="1703344951684" duration="4168000" />
-      <workItem from="1703404454802" duration="24050000" />
+      <workItem from="1703404454802" duration="26186000" />
     </task>
     <servers />
   </component>

@@ -110,6 +110,7 @@ const BoosterProfile = () => {
           }}
         />
         <Text style={Styles.userName}>{user.nickname}</Text>
+
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
       </View>
@@ -152,11 +153,6 @@ const BoosterProfile = () => {
           ) : (
             <Text>Нет новых заказов</Text>
           )}
-          <Pressable style={[Styles.button, Styles.buttonOpen]}>
-            <Text style={Styles.textStyle}>
-              В каждом заказе кнопочка "Принять в работу"
-            </Text>
-          </Pressable>
         </View>
       )}
       <View>
