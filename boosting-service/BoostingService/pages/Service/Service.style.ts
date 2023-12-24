@@ -74,5 +74,10 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  thumb: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#D0A2F7',
+  },
 })
 export default Styles

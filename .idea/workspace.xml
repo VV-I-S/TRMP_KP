@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37b30bc5-154e-49c6-a68d-549055229614" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703344948576</updated>
       <workItem from="1703344951684" duration="4168000" />
-      <workItem from="1703404454802" duration="21221000" />
+      <workItem from="1703404454802" duration="21524000" />
     </task>
     <servers />
   </component>

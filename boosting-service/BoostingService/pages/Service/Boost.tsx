@@ -14,7 +14,12 @@ const Boost = () => {
         <TextInput
           style={Styles.inputStyle}
           placeholder="Конечный ммр"></TextInput>
-        <Slider maximumValue={500} minimumValue={100} step={50} />
+        <Slider
+          thumbStyle={Styles.thumb}
+          maximumValue={500}
+          minimumValue={100}
+          step={50}
+        />
         <Text>Value</Text>
         <View style={Styles.formText}>
           <Text style={Styles.formText}>Конечный ммр:</Text>

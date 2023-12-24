@@ -65,6 +65,22 @@ export default function App() {
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
         />
+        <Drawer.Screen
+          name="Калибровка"
+          component={Calibration}
+          options={{
+            drawerLabel: 'Калибровка',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
+        <Drawer.Screen
+          name="Single Draft"
+          component={SingleDraft}
+          options={{
+            drawerLabel: 'Single Draft',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   )
