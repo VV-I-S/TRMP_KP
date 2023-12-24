@@ -8,59 +8,64 @@ import AdminProfile from './pages/Profile/AdminProfile/AdminProfile'
 import UserProfile from './pages/Profile/UserProfile/UserProfile'
 import axios from 'axios'
 import Profile from './pages/Profile/Profile.tsx'
-
-// const routConfig = {
-//   Login:{
-//     screen: Login
-//   }
-// }
+import Boost from './pages/Service/Boost'
+import Calibration from './pages/Service/Calibration'
+import SingleDraft from './pages/Service/SingleDraft'
 
 const Drawer = createDrawerNavigator()
 
 export default function App() {
-    return (
-        <NavigationContainer>
-            <Drawer.Navigator
-                initialRouteName="Вход в личный кабинет"
-                drawerStyle={{backgroundColor: 'white'}}
-                screenOptions={{
-                    drawerActiveTintColor: 'white',
-                    drawerInactiveTintColor: 'black',
-                }}>
-                <Drawer.Screen
-                    name="Вход в личный кабинет"
-                    component={Login}
-                    options={{
-                        drawerLabel: 'Вход в личный кабинет',
-                        drawerStyle: {backgroundColor: '#D0A2F7'},
-                    }}
-                />
-                <Drawer.Screen
-                    name="Регистрация"
-                    component={Register}
-                    options={{
-                        drawerItemStyle: {height: 0},
-                        drawerLabel: 'Регистрация',
-                        drawerStyle: {backgroundColor: '#e0b0ff'},
-                    }}
-                />
-                <Drawer.Screen
-                    name="Управление аккаунтами"
-                    component={AdminProfile}
-                    options={{
-                        drawerLabel: 'Управление аккаунтами',
-                        drawerStyle: {backgroundColor: '#e0b0ff'},
-                    }}
-                />
-                <Drawer.Screen
-                    name="Личный кабинет"
-                    component={Profile}
-                    options={{
-                        drawerLabel: 'Личный кабинет',
-                        drawerStyle: {backgroundColor: '#e0b0ff'},
-                    }}
-                />
-            </Drawer.Navigator>
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator
+        initialRouteName="Вход в личный кабинет"
+        drawerStyle={{backgroundColor: 'white'}}
+        screenOptions={{
+          drawerActiveTintColor: 'white',
+          drawerInactiveTintColor: 'black',
+        }}>
+        <Drawer.Screen
+          name="Вход в личный кабинет"
+          component={Login}
+          options={{
+            drawerLabel: 'Вход в личный кабинет',
+            drawerStyle: {backgroundColor: '#D0A2F7'},
+          }}
+        />
+        <Drawer.Screen
+          name="Регистрация"
+          component={Register}
+          options={{
+            drawerItemStyle: {height: 0},
+            drawerLabel: 'Регистрация',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
+        <Drawer.Screen
+          name="Управление аккаунтами"
+          component={AdminProfile}
+          options={{
+            drawerLabel: 'Управление аккаунтами',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
+        <Drawer.Screen
+          name="Личный кабинет"
+          component={Profile}
+          options={{
+            drawerLabel: 'Личный кабинет',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
+        <Drawer.Screen
+          name="Повышение рейтинга"
+          component={Boost}
+          options={{
+            drawerLabel: 'Повышение рейтинга',
+            drawerStyle: {backgroundColor: '#e0b0ff'},
+          }}
+        />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
 }
