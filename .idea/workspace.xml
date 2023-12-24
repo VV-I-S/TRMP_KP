@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37b30bc5-154e-49c6-a68d-549055229614" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Calibration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Calibration.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="2ZwtPhYrEuv7W2EsLoOnnpvPwTR" />
   <component name="ProjectViewState">
@@ -136,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703344948576</updated>
       <workItem from="1703344951684" duration="4168000" />
-      <workItem from="1703404454802" duration="21524000" />
+      <workItem from="1703404454802" duration="23465000" />
     </task>
     <servers />
   </component>
