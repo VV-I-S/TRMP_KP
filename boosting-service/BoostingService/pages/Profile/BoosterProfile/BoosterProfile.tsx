@@ -98,6 +98,12 @@ const BoosterProfile = () => {
     })
   }
 
+  const updateInfo = () => {
+    axios
+      .get<UserProfileTypes>('/user/getUserInfo')
+      .then(({data}) => setUser(data))
+  }
+
   return (
     <View style={Styles.container}>
       <View style={Styles.container2}>
@@ -110,9 +116,8 @@ const BoosterProfile = () => {
                 : 'https://cdn-icons-png.flaticon.com/512/25/25400.png',
           }}
         />
-        <EditProfile />
+        <EditProfile updateInfo={updateInfo} />
         <Text style={Styles.userName}>{user.nickname}</Text>
-
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
       </View>

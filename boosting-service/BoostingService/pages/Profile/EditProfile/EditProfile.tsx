@@ -1,21 +1,19 @@
 import {Modal, Pressable, Text, TextInput} from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, {FC, useEffect, useState} from 'react'
 import {userStore} from '../../../mobx'
 import axios from 'axios'
+import {observer} from 'mobx-react-lite'
 
-const EditProfile = () => {
+type EditProfileProps = {
+  updateInfo: () => void
+}
+
+const EditProfile: FC<EditProfileProps> = ({updateInfo}) => {
   const [modalVisible, setModalVisible] = useState(false)
-  const [avatar, setAvatar] = useState('')
-  const [nickname, setNickname] = useState('')
-  const [phone, setPhone] = useState('')
+  const [avatar, setAvatar] = useState(userStore.avatar)
+  const [nickname, setNickname] = useState(userStore.nickname)
+  const [phone, setPhone] = useState(userStore.telephone)
   const [password, setPassword] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-
-  useEffect(() => {
-    setAvatar(userStore.avatar)
-    setNickname(userStore.nickname)
-    setPhone(userStore.telephone)
-  }, [modalVisible])
 
   const submitChange = () => {
     const formData = {
@@ -25,11 +23,10 @@ const EditProfile = () => {
       password,
     }
 
-    axios
-      .post('/account/changeInfo', formData)
-      .then(() => setModalVisible((prevState) => !prevState))
-
-    setModalVisible(false)
+    axios.post('/account/changeInfo', formData).then(() => {
+      setModalVisible((prevState) => !prevState)
+      updateInfo()
+    })
   }
 
   return (
@@ -42,19 +39,23 @@ const EditProfile = () => {
         <TextInput
           placeholder={'Аватарка'}
           value={avatar}
-          onChangeText={(text) => setAvatar(text)}></TextInput>
+          onChangeText={(text) => setAvatar(text)}
+        />
         <TextInput
           placeholder={'Никнейм'}
           value={nickname}
-          onChangeText={(text) => setNickname(text)}></TextInput>
+          onChangeText={(text) => setNickname(text)}
+        />
         <TextInput
           placeholder={'Телефон'}
           value={phone}
-          onChangeText={(text) => setPhone(text)}></TextInput>
+          onChangeText={(text) => setPhone(text)}
+        />
         <TextInput
           placeholder={'Пароль'}
           value={password}
-          onChangeText={(text) => setPassword(text)}></TextInput>
+          onChangeText={(text) => setPassword(text)}
+        />
         <Pressable onPress={submitChange}>
           <Text>Сохранить</Text>
         </Pressable>
@@ -66,4 +67,4 @@ const EditProfile = () => {
   )
 }
 
-export default EditProfile
+export default observer(EditProfile)

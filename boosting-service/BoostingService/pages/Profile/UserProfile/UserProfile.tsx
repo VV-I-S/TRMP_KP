@@ -103,6 +103,12 @@ const UserProfile = () => {
       .then(() => setCanReloadOrder((prevState) => !prevState))
   }
 
+  const updateInfo = () => {
+    axios
+      .get<UserProfileTypes>('/user/getUserInfo')
+      .then(({data}) => setUser(data))
+  }
+
   return (
     <View style={Styles.container}>
       <View style={Styles.container2}>
@@ -118,7 +124,7 @@ const UserProfile = () => {
         <Text style={Styles.userName}>{user.nickname}</Text>
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
-        <EditProfile />
+        <EditProfile updateInfo={updateInfo} />
       </View>
       {newOrder ? (
         <View>
