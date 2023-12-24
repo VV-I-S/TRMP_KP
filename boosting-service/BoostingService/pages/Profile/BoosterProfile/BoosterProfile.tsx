@@ -14,6 +14,7 @@ import Styles from './BoosterProfile.style'
 import {Table, TableWrapper, Row, Rows, Col} from 'react-native-table-component'
 import {userStore} from '../../../mobx'
 import {observer} from 'mobx-react-lite'
+import EditProfile from '../EditProfile/EditProfile.tsx'
 
 type UserProfileTypes = {
   nickname: string
@@ -109,21 +110,27 @@ const BoosterProfile = () => {
                 : 'https://cdn-icons-png.flaticon.com/512/25/25400.png',
           }}
         />
+        <EditProfile />
         <Text style={Styles.userName}>{user.nickname}</Text>
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
       </View>
-      <View>
-        <Text style={Styles.userName}>Текущий заказ</Text>
-        <Text>Начальный ММР: {orderNow?.startMMR}</Text>
-        <Text>Конечный ММР: {orderNow?.endMMR}</Text>
-        <Text>Количество игр SD: {orderNow?.countLP}</Text>
-        <Text>Стоимость: {orderNow?.cost}руб.</Text>
-        <Text>Статус: {orderNow?.status}</Text>
-        {orderNow?.status === 'Выполняется' && (
-          <Button title="Выполнен" onPress={onDone} />
-        )}
-      </View>
+      {orderNow ? (
+        <View>
+          <Text style={Styles.userName}>Текущий заказ</Text>
+          <Text>Начальный ММР: {orderNow?.startMMR}</Text>
+          <Text>Конечный ММР: {orderNow?.endMMR}</Text>
+          <Text>Количество игр SD: {orderNow?.countLP}</Text>
+          <Text>Стоимость: {orderNow?.cost}руб.</Text>
+          <Text>Статус: {orderNow?.status}</Text>
+          {orderNow?.status === 'Выполняется' && (
+            <Button title="Выполнен" onPress={onDone} />
+          )}
+        </View>
+      ) : (
+        <Text>Текущего заказа нет</Text>
+      )}
+
       {!orderNow && (
         <View>
           <Text style={Styles.userName}>Список заказов</Text>

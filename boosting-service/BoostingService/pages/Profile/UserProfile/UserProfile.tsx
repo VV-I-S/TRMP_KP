@@ -118,22 +118,31 @@ const UserProfile = () => {
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
       </View>
-      <View>
-        <Text style={Styles.userName}>Текущий заказ</Text>
-        <Text>Начальный ММР: {newOrder?.startMMR}</Text>
-        <Text>Конечный ММР: {newOrder?.endMMR}</Text>
-        <Text>Количество игр SD: {newOrder?.countLP}</Text>
-        <Text>Стоимость: {newOrder?.cost}руб.</Text>
-        <Text>Статус: {newOrder?.status}</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-          {newOrder?.status === 'Ожидает оплаты' && (
-            <Button title="Оплатить" onPress={onPay} />
-          )}
-          {['Ожидает оплаты', 'Ожидает подтверждения', 'Выполняется'].includes(
-            newOrder?.status ?? '',
-          ) && <Button title="Отменить" onPress={onCancel} />}
+      {newOrder ? (
+        <View>
+          <Text style={Styles.userName}>Текущий заказ</Text>
+          <Text>Начальный ММР: {newOrder?.startMMR}</Text>
+          <Text>Конечный ММР: {newOrder?.endMMR}</Text>
+          <Text>Количество игр SD: {newOrder?.countLP}</Text>
+          <Text>Стоимость: {newOrder?.cost}руб.</Text>
+          <Text>Статус: {newOrder?.status}</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+            {newOrder?.status === 'Ожидает оплаты' && (
+              <Button title="Оплатить" onPress={onPay} />
+            )}
+            {[
+              'Ожидает оплаты',
+              'Ожидает подтверждения',
+              'Выполняется',
+            ].includes(newOrder?.status ?? '') && (
+              <Button title="Отменить" onPress={onCancel} />
+            )}
+          </View>
         </View>
-      </View>
+      ) : (
+        <Text>Текущего заказа нет</Text>
+      )}
+
       <View>
         <Text style={Styles.userName}>История заказов</Text>
         <ScrollView>
