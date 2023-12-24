@@ -47,6 +47,7 @@ const UserProfile = () => {
     };
 
     const data = generateTableData(5, 3);
+
     useEffect(() => {
         //TODO: как-то странно это все работает, не сразу записывается
         axios.get('/user/getUserInfo').then(({data}) => setUser(data))
