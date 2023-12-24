@@ -9,7 +9,7 @@ const Styles = StyleSheet.create({
   container2: {
     backgroundColor: '#E5D4FF',
     alignItems: 'center',
-    height: 200,
+    height: 250,
   },
   userName: {
     color: 'black',

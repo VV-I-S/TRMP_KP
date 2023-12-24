@@ -14,6 +14,7 @@ import Styles from './UserProfile.style'
 import {Table, Row, TableWrapper, Cell} from 'react-native-table-component'
 import {observer} from 'mobx-react-lite'
 import {userStore} from '../../../mobx'
+import EditProfile from '../EditProfile/EditProfile'
 
 export type OrderWaitingTypes = {
   id: number
@@ -117,6 +118,7 @@ const UserProfile = () => {
         <Text style={Styles.userName}>{user.nickname}</Text>
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
+        <EditProfile />
       </View>
       {newOrder ? (
         <View>
