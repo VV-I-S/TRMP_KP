@@ -32,7 +32,7 @@ export default function App() {
                     component={Login}
                     options={{
                         drawerLabel: 'Вход в личный кабинет',
-                        drawerStyle: {backgroundColor: '#e0b0ff'},
+                        drawerStyle: {backgroundColor: '#D0A2F7'},
                     }}
                 />
                 <Drawer.Screen

@@ -6,6 +6,7 @@ import AdminProfile from './AdminProfile/AdminProfile'
 import BoosterProfile from './BoosterProfile/BoosterProfile'
 import UserProfile from './UserProfile/UserProfile'
 import {observer} from 'mobx-react-lite'
+import Styles from './Profile.style'
 
 const profiles = {
   admin: <AdminProfile />,
@@ -23,7 +24,7 @@ const Profile: ComponentWithNavigation = ({navigation}) => {
   }
 
   return (
-    <View>
+    <View style={Styles.container}>
       <Button title={'Выйти'} onPress={onExit} />
       {profiles[userStore?.role]}
     </View>

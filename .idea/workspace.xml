@@ -5,40 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37b30bc5-154e-49c6-a68d-549055229614" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TRMP_KP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TRMP_KP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/BoostingService.NnCW_Q/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d06b229-54ef-4aac-8cfb-756adc2aa22b/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/android.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gradle-plugin.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/.prettierrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/.prettierrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/AdminProfile/AdminProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/AdminProfile/AdminProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +46,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/boosting-service/BoostingService/types" />
@@ -149,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703344948576</updated>
       <workItem from="1703344951684" duration="4168000" />
-      <workItem from="1703404454802" duration="2172000" />
+      <workItem from="1703404454802" duration="8925000" />
     </task>
     <servers />
   </component>

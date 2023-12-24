@@ -63,6 +63,7 @@ const Login: ComponentWithNavigation = ({navigation}) => {
 
     return (
         <View style={Styles.container}>
+            <View style={Styles.container2}>
             <Text style={Styles.formLabel}> Вход в личный кабинет </Text>
             <View>
                 <Controller
@@ -95,17 +96,20 @@ const Login: ComponentWithNavigation = ({navigation}) => {
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
-                            style={Styles.inputStyle}
+                            style={Styles.inputStyle2}
                         />
                     )}
                     name="password"
                 />
                 {errors.password && <Text>{errors.password.message}</Text>}
-                <Button
+                <View style={Styles.formButton}>
+                <Button color="#D0A2F7"
                     title="Войти в личный кабинет"
                     onPress={handleSubmit(onLoginSubmit)}
                 />
-                <Link to={'/Регистрация'}>Зарегистрироваться</Link>
+                </View>
+                <Link to={'/Регистрация'} style={Styles.formLink}>Нет аккаунта? Зарегистрироваться</Link>
+            </View>
             </View>
         </View>
     )
