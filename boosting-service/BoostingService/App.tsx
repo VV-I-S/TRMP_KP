@@ -1,13 +1,9 @@
 import * as React from 'react'
-import {Button, View} from 'react-native'
 import {createDrawerNavigator} from '@react-navigation/drawer'
 import {NavigationContainer} from '@react-navigation/native'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
-import AdminProfile from './pages/Profile/AdminProfile/AdminProfile'
-import UserProfile from './pages/Profile/UserProfile/UserProfile'
-import axios from 'axios'
-import Profile from './pages/Profile/Profile.tsx'
+import Profile from './pages/Profile/Profile'
 import Boost from './pages/Service/Boost'
 import Calibration from './pages/Service/Calibration'
 import SingleDraft from './pages/Service/SingleDraft'
@@ -28,6 +24,7 @@ export default function App() {
           name="Вход в личный кабинет"
           component={Login}
           options={{
+            drawerItemStyle: {height: 0},
             drawerLabel: 'Вход в личный кабинет',
             drawerStyle: {backgroundColor: '#D0A2F7'},
           }}
@@ -38,14 +35,6 @@ export default function App() {
           options={{
             drawerItemStyle: {height: 0},
             drawerLabel: 'Регистрация',
-            drawerStyle: {backgroundColor: '#e0b0ff'},
-          }}
-        />
-        <Drawer.Screen
-          name="Управление аккаунтами"
-          component={AdminProfile}
-          options={{
-            drawerLabel: 'Управление аккаунтами',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
         />

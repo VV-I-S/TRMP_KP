@@ -8,14 +8,6 @@ import UserProfile from './UserProfile/UserProfile'
 import {observer} from 'mobx-react-lite'
 import Styles from './Profile.style'
 
-const profiles = {
-  admin: <AdminProfile />,
-  booster: <BoosterProfile />,
-  user: <UserProfile />,
-  '': <Text>Не войдено</Text>,
-  block: <Text>Вы в бане</Text>,
-}
-
 const Profile: ComponentWithNavigation = ({navigation}) => {
   const onExit = () => {
     axios.get('/account/logout')
@@ -23,11 +15,28 @@ const Profile: ComponentWithNavigation = ({navigation}) => {
     navigation.navigate('Вход в личный кабинет')
   }
 
+  const profiles = {
+    admin: <AdminProfile />,
+    booster: <BoosterProfile />,
+    user: <UserProfile />,
+    '': <Text>Не войдено</Text>,
+    block: <Text>Вы в бане</Text>,
+  }
+
   return (
     <View style={Styles.container}>
-      <Button title={'Выйти'} onPress={onExit} />
-      {/*@ts-ignore*/}
-      {profiles[userStore?.role as keyof profiles]}
+      {!userStore.isLogin() ? (
+        <Button
+          title={'Войти'}
+          onPress={() => navigation.navigate('Вход в личный кабинет')}
+        />
+      ) : (
+        <>
+          <Button title={'Выйти'} onPress={onExit} />
+          {/*@ts-ignore*/}
+          {profiles[userStore?.role as keyof profiles]}
+        </>
+      )}
     </View>
   )
 }
