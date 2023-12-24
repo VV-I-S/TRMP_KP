@@ -52,7 +52,6 @@ const App = () => {
           name="Повышение рейтинга"
           component={Boost}
           options={{
-            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Повышение рейтинга',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
@@ -61,7 +60,6 @@ const App = () => {
           name="Калибровка"
           component={Calibration}
           options={{
-            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Калибровка',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
@@ -70,7 +68,6 @@ const App = () => {
           name="Single Draft"
           component={SingleDraft}
           options={{
-            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Single Draft',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}

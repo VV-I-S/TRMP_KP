@@ -5,6 +5,7 @@ import Styles from './Service.style'
 import {userStore} from '../../mobx'
 import axios from 'axios'
 import {ComponentWithNavigation} from '../../types/types.ts'
+import {observer} from 'mobx-react-lite'
 
 const Boost: ComponentWithNavigation = ({navigation}) => {
   const [mmrnow, setMmrnow] = useState('')
@@ -83,14 +84,16 @@ const Boost: ComponentWithNavigation = ({navigation}) => {
               5 * (Math.trunc(getValue() / 1000) + 1) +
               3}
           </Text>
-          <Pressable style={Styles.button}>
-            <Text style={Styles.textStyle} onPress={sendOrder}>
-              Оформить заказ
-            </Text>
-          </Pressable>
+          {userStore.isLogin() ? (
+            <Pressable style={Styles.button} onPress={sendOrder}>
+              <Text style={Styles.textStyle}>Оформить заказ</Text>
+            </Pressable>
+          ) : (
+            <Text>Войдите в аккаунт</Text>
+          )}
         </View>
       </View>
     </View>
   )
 }
-export default Boost
+export default observer(Boost)
