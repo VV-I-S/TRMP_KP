@@ -7,10 +7,12 @@ import Profile from './pages/Profile/Profile'
 import Boost from './pages/Service/Boost'
 import Calibration from './pages/Service/Calibration'
 import SingleDraft from './pages/Service/SingleDraft'
+import {userStore} from './mobx'
+import {observer} from 'mobx-react-lite'
 
 const Drawer = createDrawerNavigator()
 
-export default function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator
@@ -50,6 +52,7 @@ export default function App() {
           name="Повышение рейтинга"
           component={Boost}
           options={{
+            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Повышение рейтинга',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
@@ -58,6 +61,7 @@ export default function App() {
           name="Калибровка"
           component={Calibration}
           options={{
+            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Калибровка',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
@@ -66,6 +70,7 @@ export default function App() {
           name="Single Draft"
           component={SingleDraft}
           options={{
+            drawerItemStyle: {height: userStore.isLogin() ? 45 : 0},
             drawerLabel: 'Single Draft',
             drawerStyle: {backgroundColor: '#e0b0ff'},
           }}
@@ -74,3 +79,5 @@ export default function App() {
     </NavigationContainer>
   )
 }
+
+export default observer(App)

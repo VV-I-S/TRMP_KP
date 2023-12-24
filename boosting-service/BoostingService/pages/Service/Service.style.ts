@@ -92,5 +92,8 @@ const Styles = StyleSheet.create({
     height: 30,
     backgroundColor: '#D0A2F7',
   },
+  valueStyle: {
+    textAlign: 'center',
+  },
 })
 export default Styles

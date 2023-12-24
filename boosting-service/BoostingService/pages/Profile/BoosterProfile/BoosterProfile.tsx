@@ -103,7 +103,10 @@ const BoosterProfile = () => {
         <Avatar.Image
           size={100}
           source={{
-            uri: userStore.avatar,
+            uri:
+              userStore.avatar !== ''
+                ? userStore.avatar
+                : 'https://cdn-icons-png.flaticon.com/512/25/25400.png',
           }}
         />
         <Text style={Styles.userName}>{user.nickname}</Text>
