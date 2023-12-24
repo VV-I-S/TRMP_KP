@@ -30,8 +30,8 @@ public class BoostController {
     }
 
     @GetMapping("getNewOrder")
-    public ListOrder getNewOrder(@RequestParam String email, @RequestParam Long orderid) {
-        return boostService.getNewOrderWithStatus(email, orderid, "Ожидает оплаты");
+    public ListOrder getNewOrder(@RequestParam Long orderid, Authentication auth) {
+        return boostService.getNewOrderWithStatus(auth.getName(), orderid, "Ожидает оплаты");
     }
 
     @GetMapping("getOrderStatusCancel")
