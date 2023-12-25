@@ -11,7 +11,14 @@ import {
 import axios from 'axios'
 import {Avatar} from 'react-native-paper'
 import Styles from './BoosterProfile.style'
-import {Table, TableWrapper, Row, Rows, Col} from 'react-native-table-component'
+import {
+  Table,
+  TableWrapper,
+  Row,
+  Rows,
+  Col,
+  Cell,
+} from 'react-native-table-component'
 import {userStore} from '../../../mobx'
 import {observer} from 'mobx-react-lite'
 import EditProfile from '../EditProfile/EditProfile.tsx'
@@ -156,18 +163,22 @@ const BoosterProfile = () => {
                     textStyle={Styles.headText}
                   />
                   {newOrder.orders.map((dataRow, index) => (
-                    <Row
-                      key={index}
-                      data={[
-                        dataRow.id,
-                        dataRow.dateOfCreate,
-                        dataRow.cost,
-                        <Pressable onPress={toggleModal(dataRow)}>
-                          <Text>Нажмите сюда!</Text>
-                        </Pressable>,
-                      ]}
-                      widthArr={state.widthArr}
-                    />
+                    <TableWrapper>
+                      <Cell data={dataRow.id} width={state.widthArr[0]} />
+                      <Cell
+                        data={dataRow.dateOfCreate}
+                        width={state.widthArr[1]}
+                      />
+                      <Cell data={dataRow.cost} width={state.widthArr[2]} />
+                      <Cell
+                        data={
+                          <Pressable onPress={toggleModal(dataRow)}>
+                            <Text>Нажмите сюда!</Text>
+                          </Pressable>
+                        }
+                        width={state.widthArr[3]}
+                      />
+                    </TableWrapper>
                   ))}
                 </Table>
               </ScrollView>
@@ -179,24 +190,23 @@ const BoosterProfile = () => {
       )}
       <View>
         <Text style={Styles.userName}>История заказов</Text>
-        <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
-          <Row data={state.tableHead} widthArr={state.widthArr} />
-        </Table>
         <ScrollView>
           <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
+            <Row data={state.tableHead} widthArr={state.widthArr} />
             {user.orders.map((dataRow, index) => (
-              <Row
-                key={index}
-                data={[
-                  dataRow.id,
-                  dataRow.dateOfCreate,
-                  dataRow.cost,
-                  <Pressable onPress={toggleModal(dataRow)}>
-                    <Text>Нажмите сюда!</Text>
-                  </Pressable>,
-                ]}
-                widthArr={state.widthArr}
-              />
+              <TableWrapper>
+                <Cell data={dataRow.id} width={state.widthArr[0]} />
+                <Cell data={dataRow.dateOfCreate} width={state.widthArr[1]} />
+                <Cell data={dataRow.cost} width={state.widthArr[2]} />
+                <Cell
+                  data={
+                    <Pressable onPress={toggleModal(dataRow)}>
+                      <Text>Нажмите сюда!</Text>
+                    </Pressable>
+                  }
+                  width={state.widthArr[3]}
+                />
+              </TableWrapper>
             ))}
           </Table>
         </ScrollView>
