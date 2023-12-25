@@ -71,25 +71,27 @@ const Boost: ComponentWithNavigation = ({navigation}) => {
           value={lastmmr}
           onChangeText={(text) => setLastmmr(text)}
         />
-        <Text style={Styles.valueStyle}>{getValue()}</Text>
-        <View style={Styles.formText}>
+
+        <View style={Styles.form}>
+          <Text style={Styles.formText}>Всего {getValue()} MMR</Text>
+          <Text style={Styles.formText}>Стоимость</Text>
           <Text style={Styles.formText}>
-            Стоимость (со скидкой):{' '}
-            {Math.round(getValue() * 2.5 * 0.66 * 100) / 100}
+            {Math.round(getValue() * 2.5 * 0.66 * 100) / 100} руб.
           </Text>
-          <Text style={Styles.formText}>Стоимость: {getValue() * 2.5}</Text>
+          <Text style={Styles.discount}>{getValue() * 2.5} руб.</Text>
           <Text style={Styles.formText}>
-            Дней:{' '}
+            Срок:{' '}
             {5 * (Math.trunc(getValue() / 1000) + 1) -
               5 * (Math.trunc(getValue() / 1000) + 1) +
-              3}
+              3}{' '}
+            дн.
           </Text>
           {userStore.isLogin() ? (
             <Pressable style={Styles.button} onPress={sendOrder}>
               <Text style={Styles.textStyle}>Оформить заказ</Text>
             </Pressable>
           ) : (
-            <Text>Войдите в аккаунт</Text>
+            <Text style={Styles.textLogin}>Войдите в аккаунт</Text>
           )}
         </View>
       </View>

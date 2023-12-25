@@ -6,18 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="37b30bc5-154e-49c6-a68d-549055229614" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/AdminProfile/AdminProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/AdminProfile/AdminProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/BoosterProfile/BoosterProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/EditProfile/EditProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/EditProfile/EditProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Profile/UserProfile/UserProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Boost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Calibration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Calibration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/Service.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/SingleDraft.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/boosting-service/BoostingService/pages/Service/SingleDraft.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703344948576</updated>
       <workItem from="1703344951684" duration="4168000" />
-      <workItem from="1703404454802" duration="41759000" />
+      <workItem from="1703404454802" duration="44927000" />
     </task>
     <servers />
   </component>

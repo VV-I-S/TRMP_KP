@@ -163,17 +163,28 @@ const BoosterProfile = () => {
                     textStyle={Styles.headText}
                   />
                   {newOrder.orders.map((dataRow, index) => (
-                    <TableWrapper>
-                      <Cell data={dataRow.id} width={state.widthArr[0]} />
+                    <TableWrapper key={index} style={Styles.row}>
                       <Cell
+                        textStyle={Styles.cellText}
+                        data={dataRow.id}
+                        width={state.widthArr[0]}
+                      />
+                      <Cell
+                        textStyle={Styles.cellText}
                         data={dataRow.dateOfCreate}
                         width={state.widthArr[1]}
                       />
-                      <Cell data={dataRow.cost} width={state.widthArr[2]} />
+                      <Cell
+                        textStyle={Styles.cellText}
+                        data={dataRow.cost}
+                        width={state.widthArr[2]}
+                      />
                       <Cell
                         data={
-                          <Pressable onPress={toggleModal(dataRow)}>
-                            <Text>Нажмите сюда!</Text>
+                          <Pressable
+                            onPress={toggleModal(dataRow)}
+                            style={Styles.info}>
+                            <Text style={Styles.textStyle}>Нажмите сюда!</Text>
                           </Pressable>
                         }
                         width={state.widthArr[3]}
@@ -184,7 +195,7 @@ const BoosterProfile = () => {
               </ScrollView>
             </>
           ) : (
-            <Text>Нет новых заказов</Text>
+            <Text style={Styles.orderText}>Нет новых заказов</Text>
           )}
         </View>
       )}
@@ -192,16 +203,35 @@ const BoosterProfile = () => {
         <Text style={Styles.userName}>История заказов</Text>
         <ScrollView>
           <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
-            <Row data={state.tableHead} widthArr={state.widthArr} />
+            <Row
+              data={state.tableHead}
+              widthArr={state.widthArr}
+              style={Styles.head}
+              textStyle={Styles.headText}
+            />
             {user.orders.map((dataRow, index) => (
-              <TableWrapper>
-                <Cell data={dataRow.id} width={state.widthArr[0]} />
-                <Cell data={dataRow.dateOfCreate} width={state.widthArr[1]} />
-                <Cell data={dataRow.cost} width={state.widthArr[2]} />
+              <TableWrapper key={index} style={Styles.row}>
+                <Cell
+                  textStyle={Styles.cellText}
+                  data={dataRow.id}
+                  width={state.widthArr[0]}
+                />
+                <Cell
+                  textStyle={Styles.cellText}
+                  data={dataRow.dateOfCreate}
+                  width={state.widthArr[1]}
+                />
+                <Cell
+                  textStyle={Styles.cellText}
+                  data={dataRow.cost}
+                  width={state.widthArr[2]}
+                />
                 <Cell
                   data={
-                    <Pressable onPress={toggleModal(dataRow)}>
-                      <Text>Нажмите сюда!</Text>
+                    <Pressable
+                      onPress={toggleModal(dataRow)}
+                      style={Styles.info}>
+                      <Text style={Styles.textStyle}>Нажмите сюда!</Text>
                     </Pressable>
                   }
                   width={state.widthArr[3]}
@@ -234,7 +264,7 @@ const BoosterProfile = () => {
             <Pressable
               style={[Styles.button, Styles.buttonClose]}
               onPress={toggleModal(defaultOrder)}>
-              <Text style={Styles.textStyle}>Hide Modal</Text>
+              <Text style={Styles.textStyle}>Закрыть</Text>
             </Pressable>
             {modalState.status === 'Ожидает подтверждения' && (
               <>

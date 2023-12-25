@@ -47,7 +47,7 @@ const SingleDraft = () => {
 
   return (
     <View style={Styles.container}>
-      <View style={Styles.container}>
+      <View style={Styles.container4}>
         <Text style={Styles.formLabel}>Оформить заказ</Text>
         <TextInput
           style={Styles.inputStyle2}
@@ -58,18 +58,17 @@ const SingleDraft = () => {
         />
         <View />
         <View style={Styles.formText}>
-          <Text style={Styles.formText}>
-            Стоимость (со скидкой): {+lp * 50}
-          </Text>
-          <Text style={Styles.formText}>Стоимость: {+lp * 60}</Text>
-          <Text style={Styles.formText}>От 1 до 5 дней</Text>
+          <Text style={Styles.formText}>Стоимость:</Text>
+          <Text style={Styles.formText}>{+lp * 50} руб.</Text>
+          <Text style={Styles.discount}>{+lp * 60} руб.</Text>
+          <Text style={Styles.formText}>От 1 до 3 дней</Text>
 
           {userStore.isLogin() ? (
             <Pressable style={Styles.button} onPress={sendOrder}>
               <Text style={Styles.textStyle}>Оформить заказ</Text>
             </Pressable>
           ) : (
-            <Text>Войдите в аккаунт</Text>
+            <Text style={Styles.textLogin}>Войдите в аккаунт</Text>
           )}
         </View>
       </View>

@@ -57,10 +57,10 @@ const Calibration = () => {
           onChangeText={(text) => setMmr(text)}
         />
         <View />
-        <View style={Styles.formText}>
+        <View style={Styles.form}>
           <Text style={Styles.formText}>Конечный ммр: {+mmr + 400}</Text>
-          <Text style={Styles.formText}>Стоимость (со скидкой): 1088 руб.</Text>
-          <Text style={Styles.formText}>Стоимость: 1200 руб.</Text>
+          <Text style={Styles.formText}>Стоимость: 1088 руб.</Text>
+          <Text style={Styles.discount}>1200 руб.</Text>
           <Text style={Styles.formText}>От 1 до 3 дней</Text>
 
           {userStore.isLogin() ? (
@@ -68,7 +68,7 @@ const Calibration = () => {
               <Text style={Styles.textStyle}>Оформить заказ</Text>
             </Pressable>
           ) : (
-            <Text>Войдите в аккаунт</Text>
+            <Text style={Styles.textLogin}>Войдите в аккаунт</Text>
           )}
         </View>
       </View>
