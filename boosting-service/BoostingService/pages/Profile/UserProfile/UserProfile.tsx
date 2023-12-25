@@ -50,7 +50,7 @@ const UserProfile = () => {
 
   const state = {
     tableHead: ['ID', 'Дата', 'Стоимость', 'Информация'],
-    widthArr: [40, 100, 100, 120],
+    widthArr: ['10%', '30%', '30%', 120],
   }
 
   useEffect(() => {
@@ -127,45 +127,72 @@ const UserProfile = () => {
         <EditProfile updateInfo={updateInfo} />
       </View>
       {newOrder ? (
-        <View>
-          <Text style={Styles.userName}>Текущий заказ</Text>
-          <Text>Начальный ММР: {newOrder?.startMMR}</Text>
-          <Text>Конечный ММР: {newOrder?.endMMR}</Text>
-          <Text>Количество игр SD: {newOrder?.countLP}</Text>
-          <Text>Стоимость: {newOrder?.cost}руб.</Text>
-          <Text>Статус: {newOrder?.status}</Text>
+        <View style={Styles.container3}>
+          <Text style={Styles.title}>Текущий заказ</Text>
+          <Text style={Styles.orderText}>
+            Начальный ММР: {newOrder?.startMMR}
+          </Text>
+          <Text style={Styles.orderText}>Конечный ММР: {newOrder?.endMMR}</Text>
+          <Text style={Styles.orderText}>
+            Количество игр SD: {newOrder?.countLP}
+          </Text>
+          <Text style={Styles.orderText}>{newOrder?.cost}руб.</Text>
+          <Text style={Styles.orderText}>{newOrder?.status}</Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
             {newOrder?.status === 'Ожидает оплаты' && (
-              <Button title="Оплатить" onPress={onPay} />
+              <Pressable style={Styles.button} onPress={onPay}>
+                <Text style={Styles.textStyle}>Оплатить</Text>
+              </Pressable>
             )}
             {[
               'Ожидает оплаты',
               'Ожидает подтверждения',
               'Выполняется',
             ].includes(newOrder?.status ?? '') && (
-              <Button title="Отменить" onPress={onCancel} />
+              <Pressable style={Styles.button} onPress={onCancel}>
+                <Text style={Styles.textStyle}>Отменить</Text>
+              </Pressable>
             )}
           </View>
         </View>
       ) : (
-        <Text>Текущего заказа нет</Text>
+        <Text style={Styles.orderText}>Текущего заказа нет</Text>
       )}
 
       <View>
         <Text style={Styles.userName}>История заказов</Text>
         <ScrollView>
-          <Table borderStyle={{borderColor: '#C1C0B9'}}>
-            <Row data={state.tableHead} widthArr={state.widthArr} />
+          <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
+            <Row
+              data={state.tableHead}
+              widthArr={state.widthArr}
+              style={Styles.head}
+              textStyle={Styles.headText}
+            />
             {user.orders.map((dataa, index) => (
-              <TableWrapper key={index} style={Styles.row}>
-                <Cell data={dataa.id} width={state.widthArr[0]} />
-                <Cell data={dataa.dateOfCreate} width={state.widthArr[1]} />
-                <Cell data={dataa.cost} width={state.widthArr[2]} />
+              <TableWrapper
+                key={index}
+                style={Styles.row}
+                textStyle={Styles.headText}>
+                <Cell
+                  data={dataa.id}
+                  width={state.widthArr[0]}
+                  textStyle={Styles.cellText}
+                />
+                <Cell
+                  data={dataa.dateOfCreate}
+                  width={state.widthArr[1]}
+                  textStyle={Styles.cellText}
+                />
+                <Cell
+                  data={dataa.cost}
+                  width={state.widthArr[2]}
+                  textStyle={Styles.cellText}
+                />
                 <Cell
                   data={
-                    <Pressable onPress={toggleModal(index)}>
-                      {/*Карина лучшая ❤️ */}
-                      <Text>Нажмите сюда!</Text>
+                    <Pressable onPress={toggleModal(index)} style={Styles.info}>
+                      <Text style={Styles.textStyle}>Нажмите сюда!</Text>
                     </Pressable>
                   }
                   width={state.widthArr[3]}
@@ -197,7 +224,7 @@ const UserProfile = () => {
               <Pressable
                 style={[Styles.button, Styles.buttonClose]}
                 onPress={toggleModal(-1)}>
-                <Text style={Styles.textStyle}>Hide Modal</Text>
+                <Text style={Styles.textStyle}>Закрыть</Text>
               </Pressable>
             </View>
           </View>

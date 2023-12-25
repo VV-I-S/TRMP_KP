@@ -1,4 +1,4 @@
-import {Button, Text, View} from 'react-native'
+import {Button, Text, View, Pressable} from 'react-native'
 import {ComponentWithNavigation} from '../../types/types.ts'
 import {userStore} from '../../mobx'
 import axios from 'axios'
@@ -26,13 +26,16 @@ const Profile: ComponentWithNavigation = ({navigation}) => {
   return (
     <View style={Styles.container}>
       {!userStore.isLogin() ? (
-        <Button
-          title={'Войти'}
+        <Pressable
           onPress={() => navigation.navigate('Вход в личный кабинет')}
-        />
+          style={Styles.buttonEnter}>
+          <Text style={Styles.textButton}>Войти</Text>
+        </Pressable>
       ) : (
         <>
-          <Button title={'Выйти'} onPress={onExit} />
+          <Pressable onPress={onExit} style={Styles.button}>
+            <Text style={Styles.textButton}>Выйти</Text>
+          </Pressable>
           {/*@ts-ignore*/}
           {profiles[userStore?.role as keyof profiles]}
         </>

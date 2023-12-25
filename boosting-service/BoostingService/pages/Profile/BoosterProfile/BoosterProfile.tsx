@@ -67,7 +67,7 @@ const BoosterProfile = () => {
 
   const state = {
     tableHead: ['ID', 'Дата', 'Стоимость', 'Информация'],
-    widthArr: [40, 100, 100, 120],
+    widthArr: ['10%', '30%', '30%', 120],
   }
 
   const [modalVisible, setModalVisible] = useState(false)
@@ -116,25 +116,30 @@ const BoosterProfile = () => {
                 : 'https://cdn-icons-png.flaticon.com/512/25/25400.png',
           }}
         />
-        <EditProfile updateInfo={updateInfo} />
+
         <Text style={Styles.userName}>{user.nickname}</Text>
         <Text style={Styles.userData}>{user.email}</Text>
         <Text style={Styles.userData}>{user.phone}</Text>
+        <EditProfile updateInfo={updateInfo} />
       </View>
       {orderNow ? (
-        <View>
-          <Text style={Styles.userName}>Текущий заказ</Text>
-          <Text>Начальный ММР: {orderNow?.startMMR}</Text>
-          <Text>Конечный ММР: {orderNow?.endMMR}</Text>
-          <Text>Количество игр SD: {orderNow?.countLP}</Text>
-          <Text>Стоимость: {orderNow?.cost}руб.</Text>
-          <Text>Статус: {orderNow?.status}</Text>
+        <View style={Styles.container3}>
+          <Text style={Styles.title}>Текущий заказ</Text>
+          <Text style={Styles.orderText}>
+            Начальный ММР: {orderNow?.startMMR}
+          </Text>
+          <Text style={Styles.orderText}>Конечный ММР: {orderNow?.endMMR}</Text>
+          <Text style={Styles.orderText}>
+            Количество игр SD: {orderNow?.countLP}
+          </Text>
+          <Text style={Styles.orderText}>Стоимость: {orderNow?.cost}руб.</Text>
+          <Text style={Styles.orderText}>Статус: {orderNow?.status}</Text>
           {orderNow?.status === 'Выполняется' && (
             <Button title="Выполнен" onPress={onDone} />
           )}
         </View>
       ) : (
-        <Text>Текущего заказа нет</Text>
+        <Text style={Styles.orderText}>Текущего заказа нет</Text>
       )}
 
       {!orderNow && (
@@ -143,8 +148,13 @@ const BoosterProfile = () => {
           {newOrder && newOrder.orders.length !== 0 ? (
             <>
               <ScrollView>
-                <Table borderStyle={{borderColor: '#C1C0B9'}}>
-                  <Row data={state.tableHead} widthArr={state.widthArr} />
+                <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
+                  <Row
+                    data={state.tableHead}
+                    widthArr={state.widthArr}
+                    style={Styles.head}
+                    textStyle={Styles.headText}
+                  />
                   {newOrder.orders.map((dataRow, index) => (
                     <Row
                       key={index}
@@ -169,11 +179,11 @@ const BoosterProfile = () => {
       )}
       <View>
         <Text style={Styles.userName}>История заказов</Text>
-        <Table borderStyle={{borderColor: '#C1C0B9'}}>
+        <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
           <Row data={state.tableHead} widthArr={state.widthArr} />
         </Table>
         <ScrollView>
-          <Table borderStyle={{borderColor: '#C1C0B9'}}>
+          <Table borderStyle={{borderColor: '#D0A2F7', borderWidth: 2}}>
             {user.orders.map((dataRow, index) => (
               <Row
                 key={index}

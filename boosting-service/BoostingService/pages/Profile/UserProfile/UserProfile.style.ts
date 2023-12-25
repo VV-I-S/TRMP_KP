@@ -7,13 +7,30 @@ const Styles = StyleSheet.create({
     height: 100,
   },
   container2: {
+    paddingTop: 20,
     backgroundColor: '#E5D4FF',
+    alignItems: 'center',
+    height: 250,
+  },
+  container3: {
+    paddingTop: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#D0A2F7',
     alignItems: 'center',
     height: 250,
   },
   userName: {
     color: 'black',
     fontSize: 30,
+    textAlign: 'center',
+  },
+  title: {
+    color: 'black',
+    fontSize: 30,
+    textAlign: 'center',
+    marginBottom: 10,
   },
   userData: {
     color: 'black',
@@ -23,6 +40,8 @@ const Styles = StyleSheet.create({
     margin: 20,
     backgroundColor: 'white',
     borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#D0A2F7',
     padding: 35,
     alignItems: 'center',
     shadowColor: '#000',
@@ -36,8 +55,10 @@ const Styles = StyleSheet.create({
   },
   button: {
     borderRadius: 20,
+    marginTop: 10,
     padding: 10,
     elevation: 2,
+    backgroundColor: '#D0A2F7',
   },
   buttonOpen: {
     backgroundColor: '#D0A2F7',
@@ -62,6 +83,30 @@ const Styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
   },
-  row: {flexDirection: 'row', marginTop: 6},
+  row: {flexDirection: 'row', backgroundColor: 'white'},
+  head: {
+    height: 40,
+    backgroundColor: '#E5D4FF',
+    textAlign: 'center',
+    color: 'black',
+  },
+  headText: {
+    textAlign: 'center',
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  cellText: {
+    textAlign: 'center',
+    color: 'black',
+  },
+  info: {
+    backgroundColor: '#D0A2F7',
+    paddingVertical: 10,
+  },
+  orderText: {
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 17,
+  },
 })
 export default Styles

@@ -6,20 +6,17 @@ const Styles = StyleSheet.create({
     backgroundColor: '#F1EAFF',
     height: 100,
   },
-  container2: {
-    paddingTop: 20,
-    backgroundColor: '#E5D4FF',
-    alignItems: 'center',
-    height: 250,
-  },
-  container3: {
-    paddingTop: 20,
+  inputStyle: {
+    marginTop: 20,
+    marginHorizontal: 5,
+    width: 300,
+    height: 50,
+    paddingHorizontal: 20,
+    borderRadius: 50,
     backgroundColor: 'white',
-    borderRadius: 20,
+    color: 'grey',
+    borderColor: '#F1EAFF',
     borderWidth: 2,
-    borderColor: '#D0A2F7',
-    alignItems: 'center',
-    height: 250,
   },
   userName: {
     color: 'black',
@@ -55,17 +52,17 @@ const Styles = StyleSheet.create({
   },
   button: {
     borderRadius: 20,
-    marginTop: 10,
-    padding: 10,
+    padding: 5,
     elevation: 2,
     backgroundColor: '#D0A2F7',
   },
-  buttonOpen: {
+  button2: {
+    borderRadius: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    elevation: 2,
     backgroundColor: '#D0A2F7',
-  },
-  buttonClose: {
-    marginTop: 20,
-    backgroundColor: '#D0A2F7',
+    marginTop: 10,
   },
   textStyle: {
     color: 'white',
@@ -77,6 +74,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 22,
+    backgroundColor: '#F1EAFF',
   },
   modalText: {
     marginBottom: 15,

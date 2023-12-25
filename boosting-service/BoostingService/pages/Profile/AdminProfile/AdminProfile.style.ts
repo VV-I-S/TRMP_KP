@@ -14,7 +14,7 @@ const Styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 2},
     shadowRadius: 100,
     elevation: 3,
-    marginVertical: '15%',
+    marginVertical: '25%',
     marginHorizontal: 30,
     flex: 1,
     backgroundColor: '#E5D4FF',
@@ -71,9 +71,10 @@ const Styles = StyleSheet.create({
   button: {
     borderRadius: 20,
     paddingVertical: 10,
-    paddingHorizontal: 60,
+    paddingHorizontal: 30,
     elevation: 2,
     backgroundColor: '#D0A2F7',
+    marginVertical: 5,
   },
   textStyle: {
     color: 'white',
